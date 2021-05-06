@@ -1,0 +1,11 @@
+let button = document.querySelector('button')
+button.onclick = function () {
+    function func() {
+        let random = Math.round(Math.random() * (10 - 1) + 1)
+        let user = parseInt(prompt('1 to 10'))
+        console.log(random, user);
+        while (random !== user) {
+            func()
+        }
+    }
+}

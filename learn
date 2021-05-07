@@ -1,4 +1,3 @@
-let button = document.querySelector('button')
 button.onclick = function () {
     let result = [];
     let books = [
@@ -32,10 +31,8 @@ button.onclick = function () {
     if (typeof varOne[result] === "undefined") {
         alert('We have no such book')
     } else {
-        for (let i in varOne[result]) {
-            newArray.push(books[i])
-        }
-        newArray = newArray.join(' , ')
-        alert(newArray)
+        newArray.push(books[varOne[result]])
     }
+    newArray = newArray.join(' , ')
+    alert(newArray)
 }

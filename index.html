@@ -7,9 +7,152 @@
     <title>Tabs js</title>
 </head>
 <body>
+<!--<div class="into"></div>-->
+<!--<script>-->
+<!--    let into = document.querySelector('.into'),-->
+<!--        s = "";-->
+<!--    for (let i =1; i <= 8; i++) {-->
+<!--        s += `<img src="assets/images/flower${i}.png" alt=""/>`-->
+<!--    }-->
+<!--        into.innerHTML = s-->
+<!--</script>-->
+
+<!--<div class="abs"></div>-->
+<!--<script>-->
+<!--    function func(number) {-->
+<!--        let newArray = [200]-->
+<!--        for (let i = 1; i <= number; i++) {-->
+<!--            newArray.push(newArray[i - 1] + 100)-->
+<!--        }-->
+<!--        return newArray-->
+<!--    }-->
+<!--    function getRandomInt(min, max) {-->
+<!--        min = Math.ceil(min);-->
+<!--        max = Math.floor(max);-->
+<!--        return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается-->
+<!--    }-->
+<!--    let funcResult = func(8)-->
+<!--    let abs = document.querySelector('.abs'),-->
+<!--        a = '';-->
+<!--    for (let i = 1; i <= funcResult.length; i++) {-->
+<!--        a += `<div class="ps" style="width: ${funcResult[i - 1]}px; background-color: rgb(${getRandomInt(0, 255)}, ${getRandomInt(0, 255)}, ${getRandomInt(0, 255)})">Абзац ${i}</div>`-->
+<!--    }-->
+
+<!--    abs.innerHTML = a-->
+<!--</script>-->
 
 
-<button>Go</button>
+<!--<script>-->
+<!--    function createTable() {-->
+<!--        let body = document.body,-->
+<!--            tbl = document.createElement('table')-->
+<!--        tbl.style.width = '100px'-->
+<!--        tbl.style.border = '1px solid black'-->
+
+<!--        for (let i = 1; i <= 6; i++) {-->
+<!--            let tr = tbl.insertRow()-->
+<!--            for (let j = 1; j <= 12; j++) {-->
+<!--                if (i === 2 && j === 1) {-->
+<!--                    break-->
+<!--                } else  {-->
+<!--                    let td = tr.insertCell()-->
+<!--                    td.appendChild(document.createTextNode('Cell'))-->
+<!--                    td.style.border = '1px solid black'-->
+<!--                    if (i === 1 && j === 1) {-->
+<!--                        td.setAttribute('rowSpan', '2')-->
+<!--                    }-->
+<!--                }-->
+<!--            }-->
+<!--        }-->
+<!--        body.appendChild(tbl)-->
+<!--    }-->
+<!--    createTable()-->
+<!--</script>-->
+
+<!--<script>-->
+<!--    let st = '*'-->
+<!--    let res = []-->
+<!--    for (let i = 1; i <= 7; i++) {-->
+<!--        res.push(i)-->
+<!--        res[i] = st.repeat(i)-->
+<!--    }-->
+<!--    res.splice(0, 1)-->
+<!--    for (let i in res) {-->
+<!--        console.log(res[i] + '\n')-->
+<!--    }-->
+<!--</script>-->
+<!--<div class="row">-->
+
+<!--    <div class="black">-->
+<!--        <script>-->
+<!--            let black = document.querySelector('.black'),-->
+<!--                s = "";-->
+<!--            for (let i = 1; i <= 4; i++) {-->
+<!--                s += `<div class='blackOne'</div>`-->
+<!--            }-->
+<!--            black.innerHTML = s-->
+<!--        </script>-->
+<!--    </div>-->
+
+<!--    <div class="white">-->
+<!--        <script>-->
+
+<!--        </script>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+
+
+
+<!--<div class="numeric">-->
+<!--    <div class="ol">Massiv <br>-->
+<!--        <script>-->
+<!--            let inputIn = document.querySelector('.input-in')-->
+<!--            let button = document.querySelector('button')-->
+
+<!--            let myFunc = button.onclick = function () {-->
+<!--            let group1 = ["Агеев", "Дмитренко", "Иванов", "Семенов", "Шаповалов"];-->
+<!--            group1.unshift('Berezin')-->
+<!--            group1.push('Jashenko')-->
+<!--            group1.splice(4, 1, 'Kovaleva', 'Goborchenko')-->
+<!--            let group2 = ["Филонов", "Изюмов", "Кабанов", "Дюдарев"];-->
+
+<!--            let a = group1.concat(group2)-->
+<!--            a.sort()-->
+<!--                return a-->
+<!--        }-->
+<!--            let abs = document.querySelector('.ol')-->
+<!--            for (let i in myFunc()) {-->
+<!--                document.write(parseInt(i) + 1 + ' ' + myFunc()[i] + `<br>`)-->
+<!--            }-->
+<!--        </script>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<div class="images">
+    <img class="image" src="assets/images/flower1.png" alt="">
+    <img class="image" src="assets/images/flower2.png" alt="">
+    <img class="image" src="assets/images/flower3.png" alt="">
+
+        <div class="arrow_one"></div>
+
+        <div class="arrow_two"></div>
+
+</div>
+<script>
+    document.querySelector('.arrow_one').addEventListener('click', () => {
+        document.querySelector('.image').classList.toggle('off')
+    })
+
+    let x = document.querySelectorAll('.image')
+
+    let arr = []
+    arr.push(x)
+    console.log(arr);
+</script>
+
 
 <script src="learn.js"></script>
 </body>

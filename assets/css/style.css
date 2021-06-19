@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 1800px;
+
+    background-color: white;
+}
+
+
+.images {
+    position: relative;
+
+}
+
+.image {
+    position: absolute;
+    left: -1000px;
+    top: 0;
+    transition: 1s;
+}
+
+.right {
+    left: 2000px;
+
+}
+
+.active {
+    left: 750px;
+    transition: 1s;
+}
+
+.buttons {
+    padding-top: 340px;
+    text-align: center;
+}
+
+.left {
+    left: -500px;
+
+}
+

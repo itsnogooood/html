@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs js</title>
+</head>
+<body>
+
+
+
+<div class="images">
+    <img class="image active" src="assets/images/flower1.png" alt="">
+    <img class="image" src="assets/images/flower2.png" alt="">
+    <img class="image" src="assets/images/flower3.png" alt="">
+    <img class="image" src="assets/images/flower4.png" alt="">
+    <img class="image" src="assets/images/flower5.png" alt="">
+    <img class="image" src="assets/images/flower6.png" alt="">
+    <img class="image" src="assets/images/flower7.png" alt="">
+    <img class="image" src="assets/images/flower8.png" alt="">
+</div>
+<div class="buttons">
+    <button class="prev">PREV</button>
+    <button class="next">NEXT</button>
+</div>
+
+<script>
+
+    let i = 0;
+    let n = -1;
+    let y = -2;
+    let button = document.querySelector('.next')
+    let buttonTwo = document.querySelector('.prev')
+    let image = document.querySelectorAll('.image')
+
+    button.onclick = function () {
+        image[i].className = 'image'
+        i += 1;
+        n += 1;
+        y += 1;
+        if (i === image.length) {
+            i = 0
+        } if (n === image.length) {
+            n = 0
+        } if (y === image.length) {
+            y = 0
+        }
+        image[i].className = 'image active'
+        image[n].className = 'image right'
+        image[y].className = 'image'
+        console.log('i = ' + i, 'n = ' + n, 'y = ' + y);
+    }
+
+
+    buttonTwo.onclick = function () {
+        image[i].className = 'image'
+        i -= 1;
+        n -= 1;
+        y -= 1;
+        if (i < 0) {
+            i = image.length - 1
+        }
+        if (n === -2) {
+            n = 0
+        } else if (n < 0) {
+            n = image.length - 1
+        }
+        if (y === -3) {
+            y = 6
+        } else if (y < 0) {
+            y = image.length - 1
+        }
+        image[i].className = 'image active'
+        image[n].className = 'image right'
+        image[y].className = 'image left'
+        console.log('i = ' + i, 'n = ' + n, 'y = ' + y);
+    }
+
+
+</script>
+
+
+<script src="learn.js"></script>
+</body>
+</html>
